@@ -11,30 +11,28 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const app = express();
 
-// CORS Middleware
+// ✅ CORS FIRST
 app.use(cors({
-  origin: [
-    "https://expensetrackermern11.netlify.app",
-    "http://localhost:5173"
-  ],
+  origin: "*",
   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ["Content-Type","Authorization"]
 }));
 
 app.options("*", cors());
 
+// ✅ BODY PARSER
 app.use(express.json());
 
-// Connect DB
+// DB
 connectDB();
 
-// Routes
+// ROUTES
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/income", incomeRoutes);
 app.use("/api/v1/expense", expenseRoutes);
 app.use("/api/v1/dashboard", dashboardRoutes);
 
-// Static uploads
+// STATIC
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 const PORT = process.env.PORT || 8000;
