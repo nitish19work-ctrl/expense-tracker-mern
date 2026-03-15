@@ -11,28 +11,31 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 
 const app = express();
 
-// ✅ CORS FIRST
+// ===== CORS =====
 app.use(cors({
   origin: "*",
   methods: ["GET","POST","PUT","DELETE","OPTIONS"],
   allowedHeaders: ["Content-Type","Authorization"]
 }));
 
-app.options("*", cors());
-
-// ✅ BODY PARSER
+// ===== BODY PARSER =====
 app.use(express.json());
 
-// DB
+// ===== TEST ROUTE =====
+app.get("/", (req, res) => {
+  res.send("API WORKING 🚀");
+});
+
+// ===== DATABASE =====
 connectDB();
 
-// ROUTES
+// ===== ROUTES =====
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/income", incomeRoutes);
 app.use("/api/v1/expense", expenseRoutes);
 app.use("/api/v1/dashboard", dashboardRoutes);
 
-// STATIC
+// ===== STATIC UPLOADS =====
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 const PORT = process.env.PORT || 8000;
