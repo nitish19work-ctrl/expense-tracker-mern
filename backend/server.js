@@ -11,7 +11,6 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 const app = express();
 
 // Middleware
-// Middleware
 app.use(cors({
   origin: [
     "https://expensetrackermern11.netlify.app",
@@ -20,6 +19,8 @@ app.use(cors({
   methods: ["GET","POST","PUT","DELETE"],
   allowedHeaders: ["Content-Type","Authorization"]
 }));
+
+app.use(express.json());
 
 app.use(express.json());
 // Connect Database
