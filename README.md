@@ -2,6 +2,16 @@
 
 A full stack expense tracker built using the MERN stack.
 
+## 🚀 Live Demo
+
+Frontend:  
+https://expensetrackermern11.netlify.app
+
+Backend API:  
+https://expense-tracker-mern-lyvz.onrender.com
+
+---
+
 ## Features
 
 - User Authentication
@@ -10,6 +20,8 @@ A full stack expense tracker built using the MERN stack.
 - Dashboard Analytics
 - Pie Charts, Bar Charts, Line Charts
 - Download Expense Report (Excel)
+
+---
 
 ## Tech Stack
 
@@ -20,20 +32,11 @@ A full stack expense tracker built using the MERN stack.
 - Recharts
 - Tailwind CSS
 
+---
+
 ## Installation
 
 Clone the repository
 
+```bash
 git clone https://github.com/nitish19work-ctrl/expense-tracker-mern.git
-
-Install dependencies
-
-npm install
-
-Start backend
-
-npm run server
-
-Start frontend
-
-npm run dev
