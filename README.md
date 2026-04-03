@@ -12,6 +12,22 @@ https://expense-tracker-mern-lyvz.onrender.com
 
 ---
 
+## 📸 Screenshots  
+
+### 🔐 Login Page  
+<img src="./login.png" width="80%" />
+
+### 📊 Dashboard  
+<img src="./dashboard.png" width="80%" />
+
+### 💰 Income Overview  
+<img src="./income.png" width="80%" />
+
+### 💸 Expense Overview  
+<img src="./expense.png" width="80%" />
+
+---
+
 ## Features
 
 - User Authentication
